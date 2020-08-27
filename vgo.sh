@@ -305,7 +305,7 @@ installV2Ray(){
             return 1
         }
 	 unzip -oj "$1" "$2v2ray.service" -d '/etc/systemd/system' && \
-    chmod +x '/etc/systemd/system/config.json'  || {
+    chmod +x '/etc/systemd/system/v2ray.service'  || {
             colorEcho ${YELLOW} "qusibba"
             return 1
         }
