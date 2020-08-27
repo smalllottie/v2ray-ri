@@ -304,6 +304,11 @@ installV2Ray(){
             colorEcho ${YELLOW} "Failed to create V2Ray configuration file. Please create it manually."
             return 1
         }
+	 unzip -oj "$1" "$2v2ray.service" -d '/etc/systemd/system' && \
+    chmod +x '/etc/systemd/system/config.json'  || {
+            colorEcho ${YELLOW} "qusibba"
+            return 1
+        }
 }
 
 
